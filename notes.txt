@@ -1,0 +1,78 @@
+https://react-redux.js.org/
+
+npx create-react-app .    react kuruldu
+src/App.js rafce ikle olusturuldu
+src/index.js olusturuldu
+
+axios ile degil fetch yapisi ile devam edecegiz.
+
+npm install react-router-dom 
+            react-bootstrap 
+            bootstrap 
+            @reduxjs/toolkit 
+            react-redux    
+yapilarini kurduk
+
+src/global.css dosyasini olusturduk 
+
+global.css olusturmasaydik react-bootstrap i index.js yapisinin icine import edecektik  import 'bootstrap/dist/css/bootstrap.min.css';
+
+utils/languages klasorlerini olusturduk ve languages klasorunun icine 
+dil bilgilerini koyduk
+
+Json dosyalari
+ornek 
+{
+    "code": "en",
+    "name": "English",
+    "icon": "us",
+    "currency": {
+        "title": "USD",
+        "code": "usd",
+        "icon": "$"
+    },
+    "trivialInfo": {
+        "welcome": "Welcome to our website!",
+        "aboutUs": "About Us",
+        "contact": "Contact Us",
+        "language": "Language"
+    }
+}
+
+I18N  uluslararasılaştırma için kullanılan bir kısaltmadır. "i" ve "n" arasında 18 karakter bulunduğu için bu şekilde adlandırılmıştır. i18n, yazılım uygulamalarının farklı diller ve bölgesel farklılıkları desteklemesine olanak tanır. Bu, kullanıcıların kendi dillerinde ve yerel formatlarda içerik görmelerini sağlar.
+
+i18n Nasıl Çalışır?
+i18n işlemi genellikle uygulamanın metinlerini ve diğer yerelleştirilebilir içerikleri dışarı çıkararak, bu içerikleri farklı dillerde çevirilmiş olarak saklamaktır. Uygulama çalıştırıldığında, kullanıcıya uygun olan dildeki içerik yüklenir.
+
+React uygulamalarında i18next gibi kütüphaneler, i18n işlemleri için sıklıkla kullanılır. 
+
+
+languages klasorunun icine ayrica lang.js dosyasini olusturduk.  icerisinde dillerin listesi var olacak.
+
+
+router klasoru olusturup icine router.js dosyasi olusturduk.
+
+src altinda pages klasoru olusturduk onun da latinda home klasoru olusturup icinde home.js dosyasini olusturduk. bunun icinde de rafce ile HomePage componenti olusturduk
+
+
+App.js icine RouterProvider i import ediyoruz 
+const App = () => {
+    return (
+        <Provider store={store}>
+            <RouterProvider router={router} />
+        </Provider>
+    );
+};  RouterProvider i Provider ile sarmalliyoruz
+
+
+src icinde biur store klasoru olusturuyoruz buna farkli ismler de verebiliriz. context yada  redux gibi isimlede verebiliriz
+icerisine 
+store.js dosyasi ve counter, language, ve thema klasorlerini olusturup iclerine ilgili slice dosyalariini olusturuyoruz.
+
+src altina components klasoru olusturup icinde Theme.js dosyasini olusturuyoruz. home.js icine dahil ediyoruz ve icine gerekli codlari yaziyoruz.
+
+components/Counter.js dosyasini olusturuyoruz, home.js icine dahil ediyoruz ve icine gerekli kodlari yaziyoruz
+
+components/Localization.js dosyasini olusturuyoruz, home.js icine dahil ediyoruz ve icine gerekli kodlari yaziyoruz
+
+components/Content.js dosyasini olusturuyoruz, home.js icine dahil ediyoruz ve icine gerekli kodlari yaziyoruz
